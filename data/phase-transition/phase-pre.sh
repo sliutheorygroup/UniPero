@@ -1,1 +1,0 @@
-sed -i "folders=("BT" "PT" "ST")  /variable        TEMP            equal $i.000000/g"
