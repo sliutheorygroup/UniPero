@@ -1,0 +1,89 @@
+{
+    "model": {
+        "type_map": [
+            "Ba",
+            "Pb",
+            "Ca",
+            "Sr",
+            "Bi",
+            "K",
+            "Na",
+            "Hf",
+            "Ti",
+            "Zr",
+            "Nb",
+            "Mg",
+            "In",
+            "Zn",
+            "O"
+        ],
+        "descriptor": {
+            "type": "se_atten",
+            "sel": "auto",
+            "rcut_smth": 0.5,
+            "rcut": 6.0,
+            "neuron": [
+                25,
+                50,
+                100
+            ],
+            "resnet_dt": false,
+            "axis_neuron": 16,
+            "attn": 128,
+            "attn_layer": 2,
+            "attn_mask": false,
+            "attn_dotr": true,
+            "seed": 3608149752
+        },
+        "type_embedding": {
+            "neuron": [
+                2,
+                4,
+                8
+            ],
+            "resnet_dt": false,
+            "seed": 3037512691
+        },
+        "fitting_net": {
+            "neuron": [
+                240,
+                240,
+                240
+            ],
+            "resnet_dt": true,
+            "seed": 4147182387
+        }
+    },
+    "learning_rate": {
+        "type": "exp",
+        "start_lr": 0.001,
+        "stop_lr": 3.51e-08,
+        "decay_steps": 10000
+    },
+    "loss": {
+        "type": "ener",
+        "start_pref_e": 0.02,
+        "limit_pref_e": 2,
+        "start_pref_f": 1000,
+        "limit_pref_f": 1,
+        "start_pref_v": 0.0,
+        "limit_pref_v": 0.0
+    },
+    "training": {
+        "set_prefix": "set",
+        "stop_batch": 2000000,
+        "batch_size": [xxxxxxx],
+        "disp_file": "lcurve.out",
+        "disp_freq": 1000,
+        "numb_test": 4,
+        "save_freq": 1000,
+        "save_ckpt": "model.ckpt",
+        "disp_training": true,
+        "time_training": true,
+        "profiling": false,
+        "profiling_file": "timeline.json",
+        "_comment": "that's all",
+        "systems": [xxxxxxxx],
+        "seed": 404020768
+    }
+}
