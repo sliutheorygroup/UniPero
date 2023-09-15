@@ -1,0 +1,40 @@
+# 1.0-column width: max 3.5 in
+# 2.0-column width: max 7.2 in
+# 1.5-column width: 4.72-5.36 in
+figure.dpi: 600
+# Font
+font.sans-serif: DejaVu Sans
+mathtext.fontset: custom
+mathtext.fallback: stixsans
+font.size: 5.5               # 5-7 pt
+# Axes
+axes.labelsize: 6.0          # 5-7 pt
+xtick.labelsize: 5.5         # 5-7 pt
+ytick.labelsize: 5.5         # 5-7 pt
+axes.linewidth: 0.6          # 0.25-1 pt
+grid.linewidth: 0.6          # 0.25-1 pt
+xtick.major.width: 0.6       # 0.25-1 pt
+ytick.major.width: 0.6       # 0.25-1 pt
+xtick.minor.width: 0.6       # 0.25-1 pt
+ytick.minor.width: 0.6       # 0.25-1 pt
+axes.labelpad: 2.4           # 4 * width
+xtick.major.size: 2.4        # 4 * width
+ytick.major.size: 2.4        # 4 * width
+xtick.minor.size: 1.8        # 3 * width
+ytick.minor.size: 1.8        # 3 * width
+xtick.major.pad: 1.2         # 2 * width
+ytick.major.pad: 1.2         # 2 * width
+# Line
+lines.linewidth: 0.6         # 0.25-1 pt
+lines.markeredgewidth: 0.5   # 0.25-1 pt
+lines.markersize: 4.0        # 8 * width
+# Legend
+legend.fontsize: 5.5         # 5-7 pt
+legend.edgecolor: C7
+legend.numpoints: 2
+legend.framealpha: 1.0
+legend.handlelength: 1.8
+legend.labelspacing: 0.35
+legend.handletextpad: 0.35
+legend.borderpad: 0.35
+legend.borderaxespad: 0.35

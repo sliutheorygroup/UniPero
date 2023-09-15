@@ -1,0 +1,7 @@
+{
+    "number_node": 1,
+    "cpu_per_node": 48,
+    "gpu_per_node": 0,
+    "queue_name": "LBG_CPU",
+    "group_size": 50
+}

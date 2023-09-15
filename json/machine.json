@@ -1,0 +1,20 @@
+{
+        "batch_type": "Lebesgue",
+        "context_type": "LebesgueContext",
+        "local_root" : "./",
+        "remote_profile":{
+          "email": "",
+          "password": "",
+          "project_id":  "",
+            "input_data":{
+              "job_type": "container",
+              "log_file": "log",
+              "job_name": "abacus",
+              "disk_size": 100,
+              "scass_type":"c16_m64_cpu",
+              "platform": "ali",
+              "image_name":"registry.dp.tech/dptech/abacus:3.2.3",
+              "on_demand":0
+            }
+        }
+}

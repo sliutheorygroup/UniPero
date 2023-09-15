@@ -1,0 +1,49 @@
+variable        NSTEPS          equal 50000
+variable        THERMO_FREQ     equal 10
+variable        DUMP_FREQ       equal 10
+variable        TEMP            equal 50.000000
+variable        PRES            equal 0.000000
+variable        TAU_T           equal 0.100000
+variable        TAU_P           equal 0.500000
+
+units           metal
+boundary        p p p
+atom_style      atomic
+
+neighbor        1.0 bin
+
+read_data conf.lmp
+#change_box   all triclinic
+mass            1 137.327000
+mass            2 207.200000
+mass            3 40.078000
+mass            4 87.620000
+mass            5 208.980400
+mass            6 39.098300
+mass            7 22.989700
+mass            8 178.490000
+mass            9 47.867000
+mass            10 91.224000
+mass            11 92.906000
+mass            12 23.305000
+mass            13 114.818000
+mass            14 65.409000
+mass            15 15.999400
+
+plugin load libdeepmd_lmp.so
+
+pair_style      deepmd graph.pb 
+pair_coeff      * *
+
+thermo_style    custom step temp pe ke etotal press vol lx ly lz xy xz yz
+thermo          ${THERMO_FREQ}
+
+dump		2 all custom 100 traj.lammpstrj id type x y z 
+restart         10000 dpgen.restart
+
+velocity        all create ${TEMP} 443428
+#fix             1 all nvt temp ${TEMP} ${TEMP} ${TAU_T}
+fix             1 all npt temp ${TEMP} ${TEMP} ${TAU_T} aniso ${PRES} ${PRES} ${TAU_P}
+
+timestep        0.002000
+run             ${NSTEPS} upto
