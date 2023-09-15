@@ -32,6 +32,6 @@ done
 CURRENT=`pwd`
 cd data/fitting
 unzip database.zip
-mv database/* ..
+mv database/* .
 cd "$CURRENT"
 
