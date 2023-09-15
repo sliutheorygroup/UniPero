@@ -19,8 +19,8 @@ done
 
 #copy json files
 
-cp json/machine.json data/Task-II/$i/script
-cp json/job.json data/Task-II/$i/script
+cp json/machine.json data/Task-II/script
+cp json/job.json data/Task-II/script
 
 
 for i in BT PT ST KN KNN PST PZT a-PIN_PMN_PT b-PIN_PMN_PT
