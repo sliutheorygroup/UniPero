@@ -10,5 +10,4 @@ for i in ; do
     fi
 done
 
-wait
-echo "All average structures calculation completed."
+
