@@ -29,6 +29,9 @@ do
 done
 
 #unzip database.zip
-unzip data/fitting/database.zip
-cp -r data/fitting/database/* data/fitting
-rm -rf data/fitting/database
+CURRENT=`pwd`
+cd data/fitting
+unzip database.zip
+mv database/* ..
+cd "$CURRENT"
+
