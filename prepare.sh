@@ -29,3 +29,8 @@ for i in BT PT ST KN KNN PST PZT a-PIN_PMN_PT b-PIN_PMN_PT
 do
      cp json/job.json data/phase-transition/$i
 done
+
+#unzip database.zip
+unzip data/fitting/database.zip
+mv database.zip/* ..
+rm -rf database
