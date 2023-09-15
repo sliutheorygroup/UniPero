@@ -31,4 +31,4 @@ done
 #unzip database.zip
 unzip data/fitting/database.zip
 mv data/fitting/database/* data/fitting
-rm -rf database
+rm -rf data/fitting/database
