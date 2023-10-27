@@ -9,6 +9,7 @@ do
   lbg job download $a
   cd $a
   mv traj.lammpstrj ../
+  cd ..
   rm -rf $a
     rm lat.dat
     nline=$((5009 * 250))
@@ -16,7 +17,7 @@ do
     python ../avg-dump.py traj-last.lammpstrj traj-last$j.xsf
     rm traj-last.lammpstrj
     latt=$(tail -1 lat.dat)
-    echo $a $latt >> $CURRENT/Tvslat.dat
+    echo $j $latt >> $CURRENT/Tvslat.dat
     cd $CURRENT
 done
 

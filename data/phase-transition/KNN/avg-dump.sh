@@ -9,6 +9,7 @@ do
   lbg job download $a
   cd $a
   mv traj.lammpstrj ../
+  cd ..
   rm -rf $a
     rm lat.dat
     nline=$((5009 * 250))
