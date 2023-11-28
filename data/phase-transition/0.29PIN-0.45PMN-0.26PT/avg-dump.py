@@ -12,7 +12,7 @@ inputfile = sys.argv[1]
 outputfile = sys.argv[2]
 
 # Set atom type
-atoms_type = ["Pb", "In", "Nb", "Mg", "Ti", "O"]
+atoms_type = ["Pb", "Ti", "Nb", "Mg", "In", "O"]
 
 # Define readcell function
 def readcell(f):
@@ -52,12 +52,18 @@ def readatoms(f, natoms):
     coord = np.zeros((natoms,3))
     for i in range(natoms):
         line = f.readline().split()
-        if float(line[1])==1:
+        if float(line[1])==2:
             type_index[i]=1
         elif float(line[1]) == 9:
             type_index[i]=2
-        elif float(line[1]) == 15:
+        elif float(line[1]) == 11:
             type_index[i]=3
+        elif float(line[1]) == 12:
+            type_index[i]=4
+        elif float(line[1]) == 13:
+            type_index[i]=5
+        elif float(line[1]) == 15:
+            type_index[i]=6
         tmp = [ float(x) for x in line[2:] ]
         coord[i,0] = tmp[0]
         coord[i,1] = tmp[1]
