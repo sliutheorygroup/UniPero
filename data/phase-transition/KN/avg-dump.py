@@ -52,9 +52,9 @@ def readatoms(f, natoms):
     coord = np.zeros((natoms,3))
     for i in range(natoms):
         line = f.readline().split()
-        if float(line[1])==1:
+        if float(line[1])==6:
             type_index[i]=1
-        elif float(line[1]) == 9:
+        elif float(line[1]) == 11:
             type_index[i]=2
         elif float(line[1]) == 15:
             type_index[i]=3
