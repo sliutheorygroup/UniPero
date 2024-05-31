@@ -39,6 +39,7 @@ thermo_style    custom step temp pe ke etotal press vol lx ly lz xy xz yz
 thermo          ${THERMO_FREQ}
 
 dump		2 all custom 100 traj.lammpstrj id type x y z 
+dump_modify 2 sort id
 restart         10000 dpgen.restart
 
 velocity        all create ${TEMP} 443428
